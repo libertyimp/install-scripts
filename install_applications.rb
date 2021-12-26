@@ -6,7 +6,7 @@
   -WEB BROWSER   : Firefox, Brave of Ungoogled Chromium
   -TERMINAL      : Alacritty, Kitty or URXVT
   -VIDEO VIEWER  : MPV, VLC or Celluloid
-  -IMAGE VIEWER  : SXIV, VIMIV, VIEWNOIR
+  -IMAGE VIEWER  : SXIV, VIMIV or VIEWNOIR
 
 =end
 puts "Installing an AUR Helper and then Updating an syncing repos"
