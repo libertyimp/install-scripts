@@ -38,8 +38,8 @@ if browser == "firefox"
   system('sudo pacman -S firefox')
 elsif browser == "brave"
   system('paru -S brave-browser')
-elsif browser == "chromim"
-  system('sudo pacman -S chromium')
+elsif browser == "chromium"
+  system('paru -S ungoogled-chromium')
 end
 
 puts"Now lets choose a terminal emulator."
