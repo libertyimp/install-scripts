@@ -1,6 +1,8 @@
 =begin
 
-  This program is for installing endeavourOS and installing some basic programs like i always like to have on my linux systems, you will still have to choose your own Desktop Enviornment and or Window Manager as I do not have a favorite and I would also like to allow any use of this script the freedom to choose what they like. 
+  This program is for installing endeavourOS and installing some basic programs like i always like to have on my linux systems,
+   you will still have to choose your own Desktop Enviornment and or Window Manager as I do not have a favorite and I would also like to allow any user of this script 
+    the freedom to choose what they like. 
 
 =end
 

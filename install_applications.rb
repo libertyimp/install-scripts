@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 =begin
+
   This program will install the program paru and an text editor of your choice as well as a web browser of your choice
   -EDITOR        : VIM, EMACS or VSCodium
   -WEB BROWSER   : Firefox, Brave of Ungoogled Chromium
