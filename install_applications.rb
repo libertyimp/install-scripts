@@ -14,65 +14,101 @@ system("sudo pacman -S paru")
 sleep 2
 system("sudo pacman -Syuu")
 system("clear")
-puts "[type the name of the program in all lower case] (recommended)vim, emacs, vscodium"
-print "Would you like to install VIM or Emacs or VSCodium: "
-editor = gets.chomp.to_s
+puts 'Now lets install a text editor.'
+sleep 1
+puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
+print "Would you like to install [1]vim [2]Emacs [3]VSCodium [A]ll: "
+editor = gets.chomp
 
-if editor == "vim"
+case editor
+when 1
   system('sudo pacman -S vim')
-elsif editor == "emacs"
+when 2
   system('sudo pacman -S emacs')
-elsif editor == "vscodeium"
+when 3
   system('sudo pacman -S code')
+when 12
+  system('sudo pacman -S vim emacs')
+when 13
+  system('sudo pacman -S vim code')
+when 23
+  system('sudo pacman -S emacs code')
+when 'A', 'a'
+  system('sudo pacman -S vim emacs code')
 end
 
 sleep 2
 
 puts "Now lets choose a web browser."
 sleep 1
-puts "[type the name of the program in all lower case] (recommended)firefox, brave, chromium"
-print "Would you like to install Firefox, Brave or Ungoogled Chromium: "
-browser = gets.chomp.to_s
+puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
+print "Would you like to install [1]firefox [2]Brave [3]Ungoogled Chromium [A]ll: "
+browser = gets.chomp
 
-if browser == "firefox"
+case browser
+when 1
   system('sudo pacman -S firefox')
-elsif browser == "brave"
+when 2
   system('paru -S brave-browser')
-elsif browser == "chromium"
+when 3
   system('paru -S ungoogled-chromium')
+when 12
+  system('sudo pacman -S firefox && paru -S brave-browser')
+when 13
+  system('sudo pacman -S firefox && paru -S ungoogled-chromium')
+when 23
+  system('paru -S brave-browser ungoogled-chromium')
 end
 
-puts"Now lets choose a terminal emulator."
+puts "Now lets choose a terminal emulator"
 sleep 1
-puts "[type the name of the program in all lowser case] (recommended) alacritty, kitty, urxvt"
-print "Would you like to install Alacritty, Kitty or URXVT: "
-terminal = gets.chomp.to_s
+puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
+print "Would you like to install [1]alacritty [2]kitty [3]urxvt [A]ll: "
+terminal = gets.chomp
 
-if terminal == "alacritty"
+case terminal
+when 1
   system('sudo pacman -S alacritty')
-elsif terminal == "kitty"
+when 2
   system('sudo pacman -S kitty')
-elsif terminal == "urxvt"
+when 3
   system('sudo pacman -S urxvt')
+when 12
+  system('sudo pacman -S alacritty kitty')
+when 13
+  system('sudo pacman -S alacritty urxvt')
+when 23
+  system('sudo pacman -S kitty urxvt')
+when 'A', 'a'
+  system('sudo pacman -S alacritty kitty urxvt')
 end
 
 sleep 2
 
 puts "Finally lets install an image viewer."
 sleep 1
-puts "[type the name of the program in all lower case] (recommended)sxiv, vimiv, viewnoir"
-print "Would you liek to install Sxiv, Vimiv, Viewnoir: "
-imageviewer = gets.chomp.to_s
+puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
+print "Would you like to install [1]sxiv [2]vimiv [3]viewnoir [A]ll: "
+terminal = gets.chomp
 
-if imageviewer == "sxiv"
+case imageviewer
+when 1
   system('sudo pacman -S sxiv')
-elsif imageviewer == "kitty"
+when 2
   system('sudo pacman -S vimiv')
-elsif imageviewer == "urxvt"
+when 3
   system('sudo pacman -S viewnoir')
+when 12
+  system('sudo pacman -S sxiv vimiv')
+when 13
+  system('sudo pacman -S sxiv viewnoir')
+when 23
+  system('sudo pacman -S vimiv viewnoir')
+when 'A', 'a'
+  system('sudo pacman -S sxiv vimiv viewnoir')
 end
 
 # End of script to list the installed programs so the user knows what programs where installed, though they chose them but if they are like me they have the memory of a fly lol
 system("clear")
-puts "The installation has finished\nInstalled Programs:\n -#{editor}\n -#{browser}\n -#{terminal}\n -#{imageviewer}\n :)\n"
+puts "The installation has finished\nInstalled selected programs :)"
 
