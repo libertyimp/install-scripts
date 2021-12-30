@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-=begin
 
-  This program will install the program paru and an text editor of your choice as well as a web browser of your choice
+=begin
+  Installable application options
   -EDITOR        : VIM, EMACS or VSCodium
   -WEB BROWSER   : Firefox, Brave of Ungoogled Chromium
   -TERMINAL      : Alacritty, Kitty or URXVT
@@ -9,10 +9,11 @@
   -IMAGE VIEWER  : SXIV, VIMIV or VIEWNOIR
 
 =end
-puts "Installing an AUR Helper and then Updating an syncing repos"
-system("sudo pacman -S paru")
+
+puts 'Installing an AUR Helper and then Updating an syncing repos'
+system('sudo pacman -S paru')
 sleep 2
-system("sudo pacman -Syuu")
+system('sudo pacman -Syuu')
 system("clear")
 puts 'Now lets install a text editor.'
 sleep 1
@@ -81,6 +82,31 @@ when 23
   system('sudo pacman -S kitty urxvt')
 when 'A', 'a'
   system('sudo pacman -S alacritty kitty urxvt')
+end
+
+sleep 2
+
+puts 'Lets install an video player.'
+sleep 1
+puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
+print "Would you like to install [1]mpv [2]vlc [3]celluloid [A]ll: "
+videoplayer = gets.chomp
+
+case videoplayer
+when 1
+  system('sudo pacman -S mpv')
+when 2
+  system('sudo pacman -S vlc')
+when 3
+  system('sudo pacman -S celluloid')
+when 12
+  system('sudo pacman -S mpv vlc')
+when 13
+  system('sudo pacman -S mpv celluloid')
+when 23
+  system('sudo pacman -S vlc celluloid')
+when 'A', 'a'
+  system('sudo pacman -S mpv vlc celluloid')
 end
 
 sleep 2
