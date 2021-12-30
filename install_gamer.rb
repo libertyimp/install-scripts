@@ -7,16 +7,16 @@ This script will install the programs needed for gamers
   - EXTRAS          : Wine,DXVK
 
 =end
-puts "First installing an AUR Helper(paru) and updating and syncing repos"
-system("sudo pacman -S paru")
+puts 'First installing an AUR Helper(paru) and updating and syncing repos'
+system('sudo pacman -S paru')
 sleep 2
-system("sudo pacman -Syuu")
-system("clear")
-puts "Now we will begin installing important programs for gaming on linux"
-system("sudo pacman -S wine")
-system("paru -S dxvk-bin")
+system('sudo pacman -Syuu')
 system('clear')
-print "Would you like to install [1]steam [2] lutris [A]ll: "
+puts 'Now we will begin installing important programs for gaming on linux'
+system('sudo pacman -S wine')
+system('paru -S dxvk-bin')
+system('clear')
+print 'Would you like to install [1]steam [2] lutris [A]ll: '
 gamelauncher = gets.chomp
 
 case gamelauncher
@@ -31,7 +31,7 @@ case gamelauncher
     puts 'There was an issue getting this response'
 end
 
-print "Would you like to install [1]discord [2]matrix(element) [A]ll: "
+print 'Would you like to install [1]discord [2]matrix(element) [A]ll: '
 comms = gets.chomp
 
 
@@ -48,4 +48,4 @@ case comms
 end
 
 system('clear')
-puts"Thank you, all selected program were installed :)"
+puts 'Thank you, all selected program were installed :)'

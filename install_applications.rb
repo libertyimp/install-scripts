@@ -14,11 +14,11 @@ puts 'Installing an AUR Helper and then Updating an syncing repos'
 system('sudo pacman -S paru')
 sleep 2
 system('sudo pacman -Syuu')
-system("clear")
+system('clear')
 puts 'Now lets install a text editor.'
 sleep 1
-puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
-print "Would you like to install [1]vim [2]Emacs [3]VSCodium [A]ll: "
+puts 'You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program'
+print 'Would you like to install [1]vim [2]Emacs [3]VSCodium [A]ll: '
 editor = gets.chomp
 
 case editor
@@ -40,10 +40,10 @@ end
 
 sleep 2
 
-puts "Now lets choose a web browser."
+puts 'Now lets choose a web browser.'
 sleep 1
-puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
-print "Would you like to install [1]firefox [2]Brave [3]Ungoogled Chromium [A]ll: "
+puts 'You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program'
+print 'Would you like to install [1]firefox [2]Brave [3]Ungoogled Chromium [A]ll: '
 browser = gets.chomp
 
 case browser
@@ -61,10 +61,10 @@ when 23
   system('paru -S brave-browser ungoogled-chromium')
 end
 
-puts "Now lets choose a terminal emulator"
+puts 'Now lets choose a terminal emulator'
 sleep 1
-puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
-print "Would you like to install [1]alacritty [2]kitty [3]urxvt [A]ll: "
+puts 'You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program'
+print 'Would you like to install [1]alacritty [2]kitty [3]urxvt [A]ll: '
 terminal = gets.chomp
 
 case terminal
@@ -88,8 +88,8 @@ sleep 2
 
 puts 'Lets install an video player.'
 sleep 1
-puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
-print "Would you like to install [1]mpv [2]vlc [3]celluloid [A]ll: "
+puts 'You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program'
+print 'Would you like to install [1]mpv [2]vlc [3]celluloid [A]ll: '
 videoplayer = gets.chomp
 
 case videoplayer
@@ -111,10 +111,10 @@ end
 
 sleep 2
 
-puts "Finally lets install an image viewer."
+puts 'Finally lets install an image viewer.'
 sleep 1
-puts "You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program"
-print "Would you like to install [1]sxiv [2]vimiv [3]viewnoir [A]ll: "
+puts 'You can install any combination of these programs as well, for example typing 13 would install the 1st and 3rd program'
+print 'Would you like to install [1]sxiv [2]vimiv [3]viewnoir [A]ll: '
 terminal = gets.chomp
 
 case imageviewer
@@ -135,6 +135,6 @@ when 'A', 'a'
 end
 
 # End of script to list the installed programs so the user knows what programs where installed, though they chose them but if they are like me they have the memory of a fly lol
-system("clear")
-puts "The installation has finished\nInstalled selected programs :)"
+system('clear')
+puts 'The installation has finished\nInstalled selected programs :)'
 
